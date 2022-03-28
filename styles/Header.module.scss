@@ -1,0 +1,143 @@
+$color-accent: #EE0A0E;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 8;
+  height: 116px;
+  background-color: white;
+}
+
+.top {
+  background-color: #0E0E0E;
+  color: white;
+}
+
+.top_content {
+  padding-top: 5px;
+  padding-bottom: 4px;
+  z-index: 2;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 400px;
+  padding-right: 15px;
+}
+
+.branding {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  padding: 16px 0;
+  background-color: $color-accent;
+  box-sizing: border-box;
+}
+
+.header .branding{
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: $color-accent;
+  }
+
+  :after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -25px;
+    width: 60px;
+    height: 100%;
+    background-color: $color-accent;
+    transform: skew(-20deg);
+  }
+}
+
+.logo_url {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  text-decoration: none;
+}
+
+.sitename {
+  color: white;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.8;
+  max-width: 120px;
+  margin-left: 16px;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+}
+
+.phone_link {
+  position: relative;
+  padding-left: 18px;
+  font-size: 23px;
+  letter-spacing: 0.1px;
+  text-decoration: none;
+  color: #fff;
+  transition: .2s ease;
+
+  &:hover {
+    color: $color-accent;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    margin-top: -4px;
+    border-radius: 50%;
+    background-color: $color-accent;
+  }
+}
+
+.phone_sign {
+  font-size: 14px;
+  color: #878787;
+  margin-left: 26px;
+  font-weight: 200;
+}
+
+.bottom_content {
+  height: 78px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 400px;
+}
+
+.search_icon {
+  margin: 0 0 0 auto;
+  position: relative;
+  right: 24px;
+}
+
+.account {
+  color: $color-accent;
+  font-size: 16px;
+  text-decoration: none;
+  transition: .2s ease;
+
+  &:hover {
+    opacity: .8;
+  }
+}

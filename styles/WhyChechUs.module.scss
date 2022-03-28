@@ -1,0 +1,58 @@
+.section {
+  background: #fff url(../public/feature/features-background.png) no-repeat bottom right;
+}
+
+.content {
+  padding: 0 15px 0 15px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.card {
+  width: 23.5%;
+}
+
+.img_card {
+  width: 100%;
+}
+
+.info {
+  position: relative;
+  background-color: #0E0E0E;
+  color: #fff;
+  padding: 20px 16px;
+  margin: -80px 24px 0;
+  min-height: 240px;
+  z-index: 1;
+
+  &::before {
+    background: inherit;
+    content: '';
+    display: block;
+    top: -41px;
+    left: 0;
+    bottom: 141px;
+    right: 0;
+    margin-right: 1px;
+    position: absolute;
+    transform: skewY(-8.5deg);
+    transform-origin: 100%;
+    z-index: -1;
+  }
+}
+
+.title {
+  font-size: 19px;
+  z-index: 1;
+}
+
+.subtitle {
+  margin-top: 5px;
+  font-size: 13px;
+  line-height: 1.54;
+  z-index: 1;
+}

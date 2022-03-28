@@ -1,0 +1,77 @@
+.calcforms {
+  width: 47%;
+  padding: 42px 56px;
+  background-color: rgba(255,255,255,0.7);
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 25px;
+  color: #EE0A0E;
+}
+
+.options_list {
+  margin-bottom: 32px;
+}
+
+.option {
+  font-size: 25px;
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.option_active {
+  border-bottom: 1px black solid;
+}
+
+.container_form {
+  display: none;
+}
+
+.container_form_active {
+  display: block;
+}
+
+.container_input {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.input_img {
+  background-image: url('/sprites/marker.png');
+  width: 37px;
+}
+
+.input_text {
+  box-sizing: border-box;
+  padding: 15px 20px 15px 55px;
+  background-color: #c1c1c0;
+  background-image: url('/sprites/sprt.svg');
+  background-position: 7px -533px;
+  background-repeat: no-repeat;
+  width: 100%;
+  border: 1px solid #0E0E0E;
+  color: #272727;
+  border-radius: 0;
+  font-size: 15px;
+  transition: .2s ease;
+  outline: none;
+
+  &:focus {
+    border: 1px solid #EE0A0E;
+    box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.3);
+  }
+}
+
+.img_position {
+  background-position: 7px -417px;
+}
+
+.explanation {
+  width: 100%;
+  margin-top: 5px;
+  color: #878787;
+  border-bottom: 2px solid #eaeaea;
+}
