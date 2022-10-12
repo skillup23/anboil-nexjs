@@ -1,0 +1,56 @@
+.section {
+    position: relative;
+    background: var(--first-color) url(../public/servises/services-fon.jpg) no-repeat bottom left;
+    padding-bottom: 80px;
+}
+
+.columns {
+    display: flex;
+}
+
+.column:nth-child(1) {
+    width: calc(100% - 750px);
+}
+
+.column:nth-child(2) {
+    width: 560px;
+    position: relative;
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tab {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    color: var(--text-color);
+    cursor: pointer;
+    border: 1px solid var(--second-color);
+    transition: .2s ease;
+}
+
+.tab:hover {
+    color: var(--second-color);
+}
+
+.tab_active {
+    background-color: var(--second-color);
+    color: var(--text-color-light);
+}
+
+.tab_active:hover {
+    color: var(--text-color-light);
+}
+
+.text {
+    max-width: 420px;
+    line-height: 1.4;
+    padding: 4rem 2rem 7rem 0;
+}
+
+.img {
+    width: 594px;
+    height: 420px;
+}

@@ -1,0 +1,107 @@
+.section {
+  position: relative;
+  background-color: black;
+}
+
+.slide_top {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: none;
+}
+
+.slide_top_active {
+  display: block;
+}
+
+.slide_top_about {
+  background-image: url('/hero-1.jpg');
+  animation: fadeIn .6s;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 670px;
+  padding: 0 100px;
+}
+
+.title {
+  font-size: 56px;
+  line-height: 1.3;
+  width: 700px;
+  margin-bottom: 16px;
+  color: var(--first-color);
+}
+
+.text {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 72px;
+  width: 550px;
+  color: var(--first-color);
+}
+
+.slide_top_calc {
+  background-image: url('/hero-2.jpg');
+  animation: fadeIn .6s;
+}
+
+.calc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 670px;
+  padding: 0 100px;
+  box-sizing: border-box;
+}
+
+.calc_result {
+  width: 45%;
+}
+
+.tabs {
+  position: absolute;
+  bottom: 32px;
+  left: 0;
+  width: 100%;
+}
+
+.tabs_list {
+  display: flex;
+  padding: 0 100px;
+  justify-content: center;
+}
+
+.tab {
+  display: block;
+  width: 49%;
+  max-width: 420px;
+  margin-right: 20px;
+  padding-top: 5px;
+  border-top: 5px solid var(--first-color);
+  color: var(--first-color);
+  cursor: pointer;
+  opacity: .5;
+  transition: opacity .2s ease;
+}
+
+.tab_active {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    visibility: hidden;
+    transition: all 300ms cubic-bezier(.2,0,.2,1);
+    opacity: 0;
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+

@@ -1,0 +1,62 @@
+.section_about {
+  background: var(--first-color) url(../public/front-text.jpg) no-repeat center;
+  background-size: cover;
+  padding: 120px 0;
+}
+
+.content_about {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 500px;
+    height: 500px;
+    margin-top: -250px;
+    background-repeat: no-repeat;
+    background-image: url(../public/red-square.svg);
+  }
+}
+
+.node_about {
+  padding: 0 98px;
+}
+
+.title_about_red {
+  color: var(--second-color);
+  text-decoration: none;
+}
+
+.title_about {
+  font-size: 34px;
+  text-align: left;
+  color: var(--first-color);
+  width: 600px;
+  margin-bottom: 20px;
+  line-height: 1.55;
+}
+
+.text_about_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.text_about {
+  display: block;
+  width: 48%;
+  color: var(--first-color);
+  line-height: 1.55;
+  font-size: 15px;
+}
+
+.text_p {
+  margin-bottom: 18px;
+}
