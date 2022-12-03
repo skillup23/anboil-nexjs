@@ -1,6 +1,7 @@
   .content {
-    width: 100%;
+    width: 85%;
     position: relative;
+    margin: auto;
   }
   .carousel {
     display: flex;
@@ -23,14 +24,14 @@
   }
   
   .image {
-    
+    margin: auto;
   }
   
   .info {
-    height: 140px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 30px;
   }
   
   .info span {
@@ -40,34 +41,39 @@
   }
   
   .name {
-    font-size: 1.2rem;
+    font-size: 0.9375rem;
     font-weight: bold;
-    margin: 10px 0;
+    margin: 10px auto;
     color: #00a8fb;
+    text-transform: uppercase;
+    font-family: 'HelveticaNeueCyr', sans-serif;
+    font-weight: 400;
+    width: 225px;
   }
   
-  .buttons {
-    width: 100%;
-    text-align: center;
-  }
-  .button {
-    background-color: red;
-    border: none;
-    cursor: pointer;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-  }
-  .button_left {
-    transform: rotate(180deg);
-    position: absolute;
-    z-index: 100;
-    top: 38%;
-    left: -5%;
-  }
-  .button_right {
-    position: absolute;
-    z-index: 100;
-    top: 38%;
-    right: -5%;
-  }
+  // .buttons {
+  //   width: 100%;
+  //   text-align: center;
+  // }
+  // .button {
+  //   display: block;
+  //   background-color: red;
+  //   border: none;
+  //   cursor: pointer;
+  //   width: 60px;
+  //   height: 60px;
+  //   border-radius: 50%;
+  // }
+  // .button_left {
+  //   transform: rotate(180deg);
+  //   position: absolute;
+  //   z-index: 100;
+  //   top: 38%;
+  //   left: -5%;
+  // }
+  // .button_right {
+  //   position: absolute;
+  //   z-index: 100;
+  //   top: 38%;
+  //   right: -5%;
+  // }

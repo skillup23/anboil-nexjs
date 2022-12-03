@@ -1,30 +1,78 @@
-import { useEffect, useState, useRef } from 'react';
-import style from '../styles/SliderOursClients.module.scss'
 import Heading from "../components/Heading";
 import Image from "next/future/image";
+import React from "react";
+import Slider from "react-slick";
+import style from '../styles/SliderOursClients.module.scss'
+import {sliderOursClientsData} from '../public/data/dataMain'
 
-function SliderOursClients() {
-    //   const [data, setData] = useState([]);
-    const carousel = useRef(null);
+function SampleNextArrow(props) {
+    const { onClick } = props;
+    return (
+        <div onClick={onClick} className='button__arroy button__arroy_next'>
+            <img src='/arroy-slider.svg' />
+        </div>
+    );
+}
 
-    //   useEffect(() => {
-    //     fetch('http://localhost:3000/static/shoes.json')
-    //       .then((response) => response.json())
-    //       .then(setData);
-    //   }, []);
+function SamplePrevArrow(props) {
+    const { onClick } = props;
+    return (
+        <div onClick={onClick} className='button__arroy button__arroy_prev'>
+            <img src='/arroy-slider.svg' />
+        </div>
+    );
+}
 
-    const handleLeftClick = (e) => {
-        e.preventDefault();
-        carousel.current.scrollLeft -= carousel.current.offsetWidth;
+export default function SliderOursClients() {
+    var settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        initialSlide: 0,
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ],
+        customPaging: i => (
+            <div
+                style={{
+                    width: "10px",
+                    height: "10px",
+                    color: "blue",
+                    border: "1px red solid",
+                    borderRadius: "50%"
+                }}
+            >
+
+            </div>
+        )
     };
-
-    const handleRightClick = (e) => {
-        e.preventDefault();
-
-        carousel.current.scrollLeft += carousel.current.offsetWidth;
-    };
-
-    //   if (!data || !data.length) return null;
 
     return (
         <section className={`content-section ${style.section}`}>
@@ -33,137 +81,27 @@ function SliderOursClients() {
 
                     <Heading text="Наши клиенты" tag="h3" />
 
-                    <div className={style.carousel} ref={carousel}>
-                        <div className={style.item}>
-                            <Image
-                                className={style.image}
-                                alt="фото"
-                                width={225}
-                                height={113}
-                                src={'/slider/bunker_company1.jpg'}
-                                quality="100"
-                            />
-                            <div className={style.info}>
-                                <span className={style.name}>Бункеровочные компании</span>
-                            </div>
-                        </div>
-                        <div className={style.item}>
-                            <Image
-                                className={style.image}
-                                alt="фото"
-                                width={225}
-                                height={113}
-                                src={'/slider/bunker_company1.jpg'}
-                                quality="100"
-                            />
-                            <div className={style.info}>
-                                <span className={style.name}>Бункеровочные компании</span>
-                            </div>
-                        </div>
-                        <div className={style.item}>
-                            <Image
-                                className={style.image}
-                                alt="фото"
-                                width={225}
-                                height={113}
-                                src={'/slider/bunker_company1.jpg'}
-                                quality="100"
-                            />
-                            <div className={style.info}>
-                                <span className={style.name}>Бункеровочные компании</span>
-                            </div>
-                        </div>
-                        <div className={style.item}>
-                            <Image
-                                className={style.image}
-                                alt="фото"
-                                width={225}
-                                height={113}
-                                src={'/slider/bunker_company1.jpg'}
-                                quality="100"
-                            />
-                            <div className={style.info}>
-                                <span className={style.name}>Бункеровочные компании</span>
-                            </div>
-                        </div>
-                        <div className={style.item}>
-                            <Image
-                                className={style.image}
-                                alt="фото"
-                                width={225}
-                                height={113}
-                                src={'/slider/bunker_company1.jpg'}
-                                quality="100"
-                            />
-                            <div className={style.info}>
-                                <span className={style.name}>Бункеровочные компании</span>
-                            </div>
-                        </div>
-                        <div className={style.item}>
-                            <Image
-                                className={style.image}
-                                alt="фото"
-                                width={225}
-                                height={113}
-                                src={'/slider/bunker_company1.jpg'}
-                                quality="100"
-                            />
-                            <div className={style.info}>
-                                <span className={style.name}>Бункеровочные компании</span>
-                            </div>
-                        </div>
-                        <div className={style.item}>
-                            <Image
-                                className={style.image}
-                                alt="фото"
-                                width={225}
-                                height={113}
-                                src={'/slider/bunker_company1.jpg'}
-                                quality="100"
-                            />
-                            <div className={style.info}>
-                                <span className={style.name}>Бункеровочные компании</span>
-                            </div>
-                        </div>
-                        <div className={style.item}>
-                            <Image
-                                className={style.image}
-                                alt="фото"
-                                width={225}
-                                height={113}
-                                src={'/slider/bunker_company1.jpg'}
-                                quality="100"
-                            />
-                            <div className={style.info}>
-                                <span className={style.name}>Бункеровочные компании</span>
-                            </div>
-                        </div>
-                        <div className={style.item}>
-                            <Image
-                                className={style.image}
-                                alt="фото"
-                                width={225}
-                                height={113}
-                                src={'/slider/bunker_company1.jpg'}
-                                quality="100"
-                            />
-                            <div className={style.info}>
-                                <span className={style.name}>Бункеровочные компании</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={style.buttons}>
-                        <button onClick={handleLeftClick} className={`${style.button} ${style.button_left}`}>
-                            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 11L6 6L1 1" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                        </button>
-                        <button onClick={handleRightClick} className={`${style.button} ${style.button_right}`}>
-                            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 11L6 6L1 1" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                        </button>
-                    </div>
+                    <Slider {...settings}>
+                        {sliderOursClientsData.map(({id, name, img}) => {
+                            return (
+                                <div key={id} style="display:flex" className={style.item}>
+                                    <Image
+                                        className={style.image}
+                                        alt="фото"
+                                        width={225}
+                                        height={113}
+                                        src={img}
+                                        quality="100"
+                                    />
+                                    <div className={style.info}>
+                                        <span className={style.name}>{name}</span>
+                                    </div>
+                                </div>
+                            )
+                        })}
+                    </Slider>
                 </div>
             </div>
         </section>
     );
 }
-
-export default SliderOursClients;

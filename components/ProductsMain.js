@@ -2,99 +2,17 @@ import style from '../styles/ProductsMain.module.scss'
 import Heading from "../components/Heading";
 import Button from './Button';
 import { useState } from 'react';
+import {dt, bz, bt, gz, oi, kr} from '../public/data/dataMain'
 
 
 function ProductsMain() {
     const [activeTab, setActiveTab] = useState('dt');
-    
-    const dt = [
-        {
-            id: 1,
-            name: 'Дизельное топливо ЕВРО, летнее',
-            subname: 'ДТЛ сорт С',
-            density: '0.83',
-            price: '64500',
-        },
-        {
-            id: 2,
-            name: 'Топливо низкозастывающее',
-            subname: 'ТН',
-            density: '0.83',
-            price: '55450',
-        },
-        {
-            id: 3,
-            name: 'Топливный компонент селективной очистки',
-            subname: 'ТКСО',
-            density: '0.83',
-            price: '54900',
-        },
-    ]
-
-    const bz = [
-        {
-            id: 1,
-            name: 'АИ-92-К5',
-            subname: 'Бензин',
-            density: '0.73',
-            price: '51500',
-        },
-        {
-            id: 2,
-            name: 'АИ-95-К5',
-            subname: 'Бензин',
-            density: '0.74',
-            price: '58000',
-        },
-    ];
-
-    const bt = [
-        {
-            id: 1,
-            name: 'Битум',
-            subname: 'Дорожный',
-            density: '0',
-            price: '29400',
-        },
-    ];
-
-    const gz = [
-        {
-            id: 1,
-            name: 'ГАЗ ПБА',
-            subname: 'Газ ПБА',
-            density: '0.53',
-            price: '24000',
-        },
-    ];
-
-    const oi = [
-        {
-            id: 1,
-            name: 'Масло',
-            subname: 'Отсутствует',
-            density: '0',
-            price: '0',
-        },
-    ];
-
-    const kr = [
-        {
-            id: 1,
-            name: 'Керосин',
-            subname: 'Отсутствует',
-            density: '0',
-            price: '0',
-        },
-    ];
-
     const [activeContent, setActiveContent] = useState(dt);
 
     function  onAtributContent(item, tab) {
         setActiveTab(tab);
         setActiveContent(item);
     }
-
 
     return (
         <section className={`content-section ${style.section}`}>
@@ -143,37 +61,6 @@ function ProductsMain() {
 
                     <Button text='В каталог' link='/' position='center'/>
 
-
-
-
-
-
-                    {/* <div className={style.column}>
-                        <div className={style.tabs}>
-                            <a
-                                onClick={() => setActiveContent(true)}
-                                className={`${style.tab} font__extra ${activeContent ? `${style.tab_active}` : ''}`}>
-                                Перевалка и хранение ГСМ
-                            </a>
-                            <a
-                                onClick={() => setActiveContent(false)}
-                                className={`${style.tab} font__extra ${activeContent ? '' : `${style.tab_active}`}`}>
-                                Доставка ГСМ
-                            </a>
-                        </div>
-                        <p className={`${style.text} font__light`}>{activeContent ? slide1.text : slide2.text}</p>
-                        <Button text="Подробнее" link={activeContent ? slide1.link : slide2.link} />
-                    </div>
-                    <div className={style.column}>
-                        <Image
-                            className={style.img}
-                            alt="фото"
-                            width={560}
-                            height={420}
-                            src={activeContent ? slide1.img : slide2.img}
-                            quality="100"
-                        />
-                    </div> */}
                 </div>
             </div>
         </section>

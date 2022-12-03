@@ -4,6 +4,7 @@ import WhyChechUs from "../components/WhyChechUs";
 import ServisesComponent from "../components/ServisesComponent";
 import ProductsMain from "../components/ProductsMain";
 import SliderOursClients from "../components/SliderOursClients";
+import ContactFormMain from "../components/ContactFormMain";
 
 function Main() {
   return (
@@ -30,6 +31,7 @@ function Main() {
       <ServisesComponent />
       <ProductsMain />
       <SliderOursClients />
+      <ContactFormMain />
     </div>
   );
 }

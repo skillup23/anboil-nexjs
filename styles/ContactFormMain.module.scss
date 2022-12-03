@@ -1,0 +1,99 @@
+.section {
+    position: relative;
+    background: url(../public/front-products.jpg) no-repeat center;
+    background-size: cover;
+    padding-bottom: 80px;
+}
+
+.content {
+    display: flex;
+}
+
+.column:first-child {
+    width: 34%;
+}
+.column:last-child {
+    width: 63.5%;
+}
+
+.title {
+    font-style: normal;
+    font-size: 3.875rem;
+    line-height: 1.3;
+    color: var(--text-color-light);
+}
+.title span {
+    color: var(--second-color);
+}
+
+.subtitle {
+    margin-top: 2rem;
+    font-size: 1.875rem;
+    line-height: 1.5;
+    font-weight: 600;
+    color: var(--text-color-light);
+    width: 270px;
+}
+.subtitle span {
+    font-weight: 400;
+}
+
+
+.mainForm {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inputGroup {
+    width: 48.5%;
+    background-color: transparent;
+    font-size: 0.9375rem;
+    transition: .2s ease;
+    // padding: 0 1.25rem;
+    height: 50px;
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.inputField {
+    color: var(--first-color);
+    font-size: 0.9375rem;
+    width: 100%;
+    border: 1px solid var(--first-color);
+}
+.inputField:focus{
+    border: 1px solid var(--second-color);
+}
+
+.inputArea {
+    width: 100%;
+    height: 170px;
+    line-height: 1.4;
+    font-size: 0.9375rem;
+    color: var(--first-color);
+}
+
+.inputButtom {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EE0A0E;
+    height: 50px;
+    width: 150px;
+    padding: 0 10px 0 10px;
+    text-decoration: none;
+    transform: skewX(-15deg);
+    transition: .3s ease;
+}
+
+.inputButtom input {
+    text-align: center;
+    color: var(--first-color);
+    font-size: 25px;
+    line-height: 50px;
+    transform: skewX(15deg);
+}
